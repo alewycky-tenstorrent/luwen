@@ -375,8 +375,6 @@ impl Blackhole {
                 None,
             )?;
 
-            std::thread::sleep(std::time::Duration::from_millis(100));
-
             if status != 0 {
                 return Err("Failed to write to SPI".into());
             }
